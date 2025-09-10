@@ -41,4 +41,9 @@ public class AddrBookController {
 		req.setAttribute("data", list);
 		return "addrbook_list";
 	}
+	
+
+	public void pjh() {
+		
+	}
 }
