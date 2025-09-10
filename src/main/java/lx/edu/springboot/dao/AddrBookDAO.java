@@ -25,8 +25,8 @@ public class AddrBookDAO {
 	public AddrBookVO getDB(int abId) throws Exception {
 		return session.selectOne("getDB", abId);
 	}
-	public boolean updateDB(AddrBookVO ab) throws Exception {
-		return false;
+	public int updateDB(AddrBookVO ab) throws Exception {
+		return session.update("updateDB", ab);
 	}
 	public boolean deleteDB(int abId) throws Exception {
 		return false;
