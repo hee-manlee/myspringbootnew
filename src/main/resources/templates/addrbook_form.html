@@ -9,9 +9,9 @@
 <div align="center">
 <H2>주소록:작성화면 </H2>
 <HR>
-[<a href="addrbook_list.do">주소록 목록으로</a>] <P>
+[<a href="list.do">주소록 목록으로</a>] <P>
 <form name=form1 method=post action="insert.do">
-<input type=hidden name="action" value="insert">
+<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
 <table border="1">
   <tr>
     <th>이 름</th>	
@@ -42,7 +42,9 @@
 </tr>
 </table>
 </form>
-<a href="logout_control.jsp">logout</a>
+<form th:action="@{/logout.do}" method="post">
+  <button type="submit">Logout</button>
+</form>
 </div>
 </body>
 </html>
